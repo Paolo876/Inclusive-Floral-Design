@@ -1,7 +1,8 @@
 import React from 'react'
 import { Typography, Box } from "@mui/material";
 import Image from "mui-image";
-import logo from "../assets/ifd_logo.png"
+import logo from "../assets/ifd_logo_bw.png"
+import banner from "../assets/ifd_banner.png"
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -37,7 +38,7 @@ const iconStyles = {
 const TempCard = () => {
   return (
     <Box align="center" sx={{my: 5, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
-      <Box
+      {/* <Box
         sx={{
         height: {xs: 50, sm: 80, md: 100},
         width: "auto",
@@ -50,8 +51,22 @@ const TempCard = () => {
         fit="scale-down"
         duration={100}
         />
+      </Box> */}
+      <Box
+        sx={{
+        // height: {xs: 50, sm: 80, md: 100},
+        width: "auto",
+        mb: 2,
+        }}
+      >
+        <Image 
+        src={banner} 
+        alt="ifd-logo" 
+        fit="scale-down"
+        duration={100}
+        />
       </Box>
-      <Typography variant="h5">INCLUSIVE FLORAL DESIGNS</Typography>
+      {/* <Typography variant="h5">INCLUSIVE FLORAL DESIGNS</Typography> */}
       <Box my={5}>
         <Typography variant="p" sx={{fontStyle: "italic", opacity: .75, fontSize: "1.2em"}}>-website under construction-</Typography>
       </Box>

@@ -5,16 +5,22 @@ export const theme = createTheme({
     palette: {
         mode: 'light',
         primary: {
-          main: '#3f51b5',
+          main: '#4f7c98',
         },
         secondary: {
-          main: '#f50057',
+          main: '#85576f',
         },
         background: {
-            default: '#c4a174',
-            paper: '#d4b992',
+          default: '#f3eded',
+          paper: '#efebe5',
         },
-    },
+        info: {
+          main: '#c1d2d2',
+        },
+        text: {
+          primary: '#353232',
+        },
+      },
     typography: {
         fontFamily: "Montserrat",
         h1: {
