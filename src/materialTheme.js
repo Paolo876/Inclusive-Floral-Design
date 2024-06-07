@@ -22,35 +22,39 @@ export const theme = createTheme({
         },
       },
     typography: {
-        fontFamily: "Montserrat",
+        fontFamily: "Forum",
         h1: {
-            fontFamily: "Oswald",
+            fontFamily: "Poiret One",
             textTransform: "uppercase",
             fontWeight: 700,
         },
         h2: {
-            fontFamily: "Oswald",
+            fontFamily: "Poiret One",
             textTransform: "uppercase",
             fontWeight: 600,
         },
         h3: {
-            fontFamily: "Oswald",
+            fontFamily: "Poiret One",
             textTransform: "uppercase",
             fontWeight: 600,
         },
         h4: {
-            fontFamily: "Oswald",
+            fontFamily: "Poiret One",
             textTransform: "uppercase",
             fontWeight: 500,
         },
         h5: {
-            fontFamily: "Oswald",
+            fontFamily: "Poiret One",
             textTransform: "uppercase",
             fontWeight: 500,
         },
         h6: {
-            fontFamily: "Oswald",
+            fontFamily: "Poiret One",
             textTransform: "uppercase",
+            fontWeight: 400,
+        },
+        p: {
+            fontFamily: "Forum",
             fontWeight: 400,
         },
     }

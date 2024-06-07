@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 
 // temp
 import TempCard from "./components/TempCard";
+import Navbar from "./components/Navbar/Navbar";
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
     <div className="App">
       {/* temp */}
       <TempCard/>
-
+      <Navbar/>
       <Routes>
         <Route element={<Home/>} path="/"/>
       </Routes>
