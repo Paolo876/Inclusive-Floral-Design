@@ -2,7 +2,8 @@ import React from 'react'
 import { Box, AppBar, Toolbar, Typography, CssBaseline, useScrollTrigger, Slide, ButtonBase } from '@mui/material'
 import Image from 'mui-image'
 import banner from "../../assets/ifd_banner.png"
-
+import SearchIcon from '@mui/icons-material/Search';
+import Searchbar from './Searchbar';
 /**
  * HOME | SHOP | SERVICES | ABOUT US | CONTACT    (ICONS) SEARCH | PROFILE | CART
  */
@@ -50,8 +51,8 @@ const Navbar = (props) => {
                 duration={100}
               />
             </Box>
-            <Box sx={{ flexGrow: 1,display: "flex", alignItems: "flex-end", width: "100%", justifyContent: "right" }}>
-              <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: "flex-end", gap: 3 }}>
+            <Box sx={{ flexGrow: 1,display: "flex", alignItems: "center", width: "100%", justifyContent: "right" }}>
+              <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: "center", gap: 3, justifyContent: "center"}}>
                 {menuItems.map((item) => <ButtonBase key={item.value}>
                   <Typography 
                     variant='h6'
@@ -59,8 +60,7 @@ const Navbar = (props) => {
                     sx={{
                       letterSpacing: .5,
                       fontSize: {xs: "1.25em"},
-                      textTransform: "uppercase",
-                      
+                      textTransform: "uppercase",                     
                     }}
                   >
                     {item.title}
@@ -69,6 +69,7 @@ const Navbar = (props) => {
               </Box>
               <Box>
                 {/* ICONS (3) */}
+                <Searchbar/>
               </Box>
             </Box>
           </Toolbar>
