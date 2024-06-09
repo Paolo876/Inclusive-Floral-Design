@@ -4,6 +4,8 @@ import Image from 'mui-image'
 import banner from "../../assets/ifd_banner.png"
 import SearchIcon from '@mui/icons-material/Search';
 import Searchbar from './Searchbar';
+import AccountIcon from './AccountIcon';
+import CartIcon from './CartIcon';
 /**
  * HOME | SHOP | SERVICES | ABOUT US | CONTACT    (ICONS) SEARCH | PROFILE | CART
  */
@@ -51,7 +53,7 @@ const Navbar = (props) => {
                 duration={100}
               />
             </Box>
-            <Box sx={{ flexGrow: 1,display: "flex", alignItems: "center", width: "100%", justifyContent: "right" }}>
+            <Box sx={{ flexGrow: 1,display: "flex", alignItems: "center", width: "100%", justifyContent: "right", gap: 4 }}>
               <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: "center", gap: 3, justifyContent: "center"}}>
                 {menuItems.map((item) => <ButtonBase key={item.value}>
                   <Typography 
@@ -67,9 +69,11 @@ const Navbar = (props) => {
                   </Typography>
                 </ButtonBase>)}
               </Box>
-              <Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: .5, justifyContent: "center"}}>
                 {/* ICONS (3) */}
                 <Searchbar/>
+                <CartIcon/>
+                <AccountIcon/>
               </Box>
             </Box>
           </Toolbar>
