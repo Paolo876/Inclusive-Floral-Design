@@ -1,22 +1,19 @@
 import React from 'react'
-import { Box, AppBar, Toolbar, Typography, CssBaseline, useScrollTrigger, Slide, ButtonBase } from '@mui/material'
+import { useLocation, NavLink, Link as ReactLink } from 'react-router-dom'
+import { Box, AppBar, Toolbar, Typography, CssBaseline, useScrollTrigger, Slide, ButtonBase, Link } from '@mui/material'
 import Image from 'mui-image'
-import banner from "../../assets/ifd_banner.png"
-import SearchIcon from '@mui/icons-material/Search';
+import logo_bw from "../../assets/ifd_logo_bw.png"
 import Searchbar from './Searchbar';
 import AccountIcon from './AccountIcon';
 import CartIcon from './CartIcon';
-/**
- * HOME | SHOP | SERVICES | ABOUT US | CONTACT    (ICONS) SEARCH | PROFILE | CART
- */
 
 
 const menuItems = [
-  { title: "Home", value: "home" },
-  { title: "Shop", value: "shop" },
-  { title: "Services", value: "services" },
-  { title: "About Us", value: "about" },
-  { title: "Contact", value: "contact" },
+  { title: "Home", value: "home", path: "/" },
+  { title: "Shop", value: "shop", path: "/shop" },
+  { title: "Services", value: "services", path: "/services" },
+  { title: "About Us", value: "about", path: "/about" },
+  { title: "Contact", value: "contact", path: "/contact" },
 ];
 
 
@@ -34,20 +31,23 @@ const HideOnScroll = (props) => {
 
 
 const Navbar = (props) => {
+  const { pathname } = useLocation()
+
   return (
     <>
       <CssBaseline />
       <HideOnScroll {...props}>
         <AppBar sx={{background: "none", boxShadow: "none"}}>
-          <Toolbar>
+          <Toolbar sx={{mx: {md: 1, xl: 2}}}>
             <Box
               sx={{
-              height: {xs: 50, sm: 80, md: 100},
+              height: {xs: 50, sm: 80, md: 80, lg: 80},
               width: "auto",
+              my: 1
               }}
             >
               <Image 
-                src={banner} 
+                src={logo_bw} 
                 alt="ifd-logo" 
                 fit="scale-down"
                 duration={100}
@@ -55,19 +55,23 @@ const Navbar = (props) => {
             </Box>
             <Box sx={{ flexGrow: 1,display: "flex", alignItems: "center", width: "100%", justifyContent: "right", gap: 4 }}>
               <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: "center", gap: 3, justifyContent: "center"}}>
-                {menuItems.map((item) => <ButtonBase key={item.value}>
-                  <Typography 
-                    variant='h6'
-                    color="text.primary"
-                    sx={{
-                      letterSpacing: .5,
-                      fontSize: {xs: "1.25em"},
-                      textTransform: "uppercase",                     
-                    }}
-                  >
-                    {item.title}
-                  </Typography>
-                </ButtonBase>)}
+                {menuItems.map((item) => <Link key={item.value} to={item.path} component={ReactLink} sx={{textDecoration: "none", m:0, p:0}}>
+                  <ButtonBase>
+                    <Typography 
+                      variant='h6'
+                      color="text.primary"
+                      sx={{
+                        letterSpacing: .5,
+                        fontWeight: pathname === item.path ? 600 : 400,
+                        opacity: pathname === item.path ? .8 : 1,
+                        fontSize: {xs: "1.25em"},
+                        textTransform: "uppercase",                     
+                      }}
+                    >
+                      {item.title}
+                    </Typography>
+                  </ButtonBase>
+                </Link>)}
               </Box>
               <Box sx={{ display: "flex", alignItems: "center", gap: .5, justifyContent: "center"}}>
                 {/* ICONS (3) */}
