@@ -22,7 +22,7 @@ html {
 body {
   margin: 0;
   position: relative;
-  background-color: black;
+  background: black;
 }
 
 
@@ -37,6 +37,18 @@ body::before {
   opacity: .5;
   z-index: -1;
 }
+
+/* body::after {
+  position: fixed;
+  content: '';
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  opacity: 1;
+  z-index: 1;
+} */
 
 
 ::-webkit-scrollbar {

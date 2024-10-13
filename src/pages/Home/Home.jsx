@@ -1,10 +1,18 @@
 import React from 'react'
+import Header from './Header'
+
+import { Box } from '@mui/material'
+
 
 const Home = () => {
   return (
-    <div>
-        
-    </div>
+    <Box 
+      sx={{
+        pt: { lg: 12}
+      }}
+    >
+      <Header/>
+    </Box>
   )
 }
 

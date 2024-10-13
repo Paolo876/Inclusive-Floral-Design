@@ -41,9 +41,10 @@ const Navbar = (props) => {
           <Toolbar sx={{mx: {md: 1, xl: 2}}}>
             <Box
               sx={{
-              height: {xs: 50, sm: 80, md: 80, lg: 80},
+              height: {xs: 50, sm: 60, md: 60, lg: 65},
               width: "auto",
-              my: 1
+              my: 1,
+              cursor: "pointer"
               }}
             >
               <Image 
@@ -56,16 +57,26 @@ const Navbar = (props) => {
             <Box sx={{ flexGrow: 1,display: "flex", alignItems: "center", width: "100%", justifyContent: "right", gap: 4 }}>
               <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: "center", gap: 3, justifyContent: "center"}}>
                 {menuItems.map((item) => <Link key={item.value} to={item.path} component={ReactLink} sx={{textDecoration: "none", m:0, p:0}}>
-                  <ButtonBase>
+                  <ButtonBase
+                    sx={{
+                      
+
+                    }}
+                  >
                     <Typography 
                       variant='h6'
                       color="text.primary"
                       sx={{
+                        transition: "all .25s ease 0s",
                         letterSpacing: .5,
                         fontWeight: pathname === item.path ? 600 : 400,
                         opacity: pathname === item.path ? .8 : 1,
                         fontSize: {xs: "1.25em"},
-                        textTransform: "uppercase",                     
+                        textTransform: "uppercase",
+                        "&:hover": {
+                          opacity: 1,
+                          fontWeight: 600,
+                        }                
                       }}
                     >
                       {item.title}

@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-
+import "./App.css"
 import Home from "./pages/Home/Home";
 
 // temp
@@ -9,9 +9,9 @@ import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       {/* temp */}
-      <TempCard/>
+      {/* <TempCard/> */}
       <Navbar/>
       <Routes>
         <Route element={<Home/>} path="/"/>
