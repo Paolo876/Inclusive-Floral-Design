@@ -3,9 +3,13 @@ import bg from "../../assets/header_bg.avif"
 import Image from 'mui-image'
 import { Box, Button, Typography } from '@mui/material'
 import bannerImg from "../../assets/ifd_banner.png"
-
+import { useNavigate } from 'react-router'
 
 const Header = () => {
+
+  const navigate = useNavigate()
+
+
   return (
     <Box sx={{
       position: "relative",
@@ -48,7 +52,7 @@ const Header = () => {
           } 
         }}
       >
-        <Box sx={{height: "130px"}}>
+        <Box sx={{height: "150px"}}>
           <Image src={bannerImg} alt="banner-img" fit="scale-down" sx={{pointerEvents: "none"}} duration={450}/>
         </Box>
         <Box
@@ -68,6 +72,7 @@ const Header = () => {
               letterSpacing: 1.8,
               px: 5
             }}
+            onClick={() => navigate("/shop")}
           >
             Shop Now
           </Button>
