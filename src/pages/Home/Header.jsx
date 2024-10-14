@@ -11,8 +11,8 @@ const Header = () => {
       position: "relative",
     }}>
       {/* background */}
-      <Box sx={{height: "40em", }}>
-        <Image src={bg} alt="header-bg" fit='cover' sx={{filter: "brightness(90%) contrast(92%)"}}/>
+      <Box sx={{height: "40em", pointerEvents: "none"}}>
+        <Image src={bg} alt="header-bg" fit='cover' sx={{filter: "brightness(90%) contrast(92%)"}} duration={300}/>
       </Box>
       {/* message */}
       <Box
@@ -21,7 +21,7 @@ const Header = () => {
           left: "50%",
           top: "45%",
           transform: "translate(-50%, -50%)",
-          px: 7,
+          px: 6,
           py: 4,
           "&::before": {
             content: '""',
@@ -43,16 +43,19 @@ const Header = () => {
             height: "105%",
             width: "102.5%",
             transform: "translate(-50%, -50%)",
-            zIndex: -1
+            zIndex: -1,
+            opacity: .75
           } 
         }}
       >
-        <Image src={bannerImg} alt="banner-img" fit="scale-down" sx={{pointerEvents: "none"}}/>
+        <Box sx={{height: "130px"}}>
+          <Image src={bannerImg} alt="banner-img" fit="scale-down" sx={{pointerEvents: "none"}} duration={450}/>
+        </Box>
         <Box
           sx={{
             mx: "auto",
             display: "flex",
-            mt: 3
+            mt: 6
           }}
         >
           <Button 
