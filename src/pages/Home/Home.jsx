@@ -3,6 +3,7 @@ import Header from './Header'
 
 import { Box } from '@mui/material'
 import FeaturedCollection from './FeaturedCollection'
+import Services from './Services'
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
     >
       <Header/>
       <FeaturedCollection/>
+      <Services/>
     </Box>
   )
 }
