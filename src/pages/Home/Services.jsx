@@ -67,7 +67,7 @@ const Services = () => {
               sx={{
                 // letterSpacing: .75,
                 fontWeight: 400,
-                mb: 10,
+                mb: 12,
               }}
               align='left'
             >
