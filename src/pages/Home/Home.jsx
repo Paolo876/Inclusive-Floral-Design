@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header'
 
 import { Box } from '@mui/material'
-import FeaturedCollection from './FeaturedCollection'
+import FeaturedCollection from './FeaturedCollection/FeaturedCollection'
 import Services from './Services'
 
 
