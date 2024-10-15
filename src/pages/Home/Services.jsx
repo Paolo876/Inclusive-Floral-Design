@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Button, Container, Typography } from '@mui/material'
 import Image from 'mui-image'
 
 import banner from "../../assets/hp_services_bg1.webp"
@@ -85,7 +85,7 @@ const Services = () => {
                 <Box 
                   id={id}
                   sx={{
-                    mb: 8,
+                    mb: 7,
                     pr: 8
                   }}
                 >
@@ -100,6 +100,9 @@ const Services = () => {
                 <Typography variant='p'>{item.description}</Typography>
                 {item.subDescription && <Typography sx={{ fontStyle: "italic"}} component="small"> {item.subDescription}</Typography>}
               </Box>))}
+            </Box>
+            <Box>
+              <Button variant='outlined' sx={{letterSpacing: 1.5}} color='primary' size="large">See All Our Services</Button>
             </Box>
           </Box>
           <Box 
