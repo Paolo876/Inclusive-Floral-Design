@@ -128,6 +128,7 @@ const Services = () => {
               duration={300} 
               sx={{
                 position: "relative",
+                filter: "brightness(100%) contrast(90%)"
               }}
             />
           </Box>

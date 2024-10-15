@@ -1,11 +1,24 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material'
+import { Box, Container, Typography } from '@mui/material'
 import Image from 'mui-image'
-
+import banner from "../assets/ifd_banner.png"
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <Box
+      sx={{
+        backgroundColor: "grey"
+      }}
+    >
+      <Container>
+        <Box>
+          <Box>
+            <Image src={banner} alt="banner" fit="scale-down"/>
+
+          </Box>
+        </Box>
+      </Container>
+    </Box>
   )
 }
 
