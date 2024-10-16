@@ -111,11 +111,11 @@ const Services = () => {
               "&::before": {
                 content:"''",
                 position: "absolute",
-                bottom: "-4%",
+                bottom: "-7%",
                 left:"-6%",
-                border: 6,
+                border: 12,
                 borderColor: "secondary.main",
-                opacity: .3,
+                opacity: .2,
                 height: "100%",
                 width: "100%",
               }
