@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Container, Typography } from '@mui/material'
+import { Box, Button, ButtonBase, Container, Typography } from '@mui/material'
 import Image from 'mui-image'
 import banner from "../assets/ifd_banner.png"
 
@@ -16,8 +16,8 @@ const Footer = () => {
     <Box
       sx={{
         backgroundColor: "grey",
-        pt: 5,
-        pb: 1
+        pt: 10,
+        pb: 5
       }}
     >
       <Container maxWidth="xl">
@@ -70,11 +70,92 @@ const Footer = () => {
 
           <Box>
             <Typography sx={{fontWeight: 600, letterSpacing: .5, mb: 3, fontSize: "1.2em"}}>Contact Information</Typography>
-
+            <Box>
+              <Box
+                sx={{
+                  mb: 2
+                }}
+              >
+                <Typography 
+                  sx={{
+                    lineHeight: 1.4,
+                    fontSize: "1.1em"
+                  }}
+                >
+                  Call Jimmy or Lupe
+                </Typography>
+              </Box>
+              <ButtonBase
+                sx={{
+                  display: "flex",
+                  width: "100%",
+                  justifyContent: "left",
+                  gap: 1,
+                  px: 1,
+                  mb: 1,
+                }}
+              >
+                <Box><LocalPhoneIcon/></Box>
+                <Typography>(323) 332 - 2280</Typography>
+              </ButtonBase>
+              <ButtonBase
+                sx={{
+                  display: "flex",
+                  width: "100%",
+                  justifyContent: "left",
+                  gap: 1,
+                  px: 1,
+                  mb: 1,
+                }}
+              >
+                <Box><LocalPhoneIcon/></Box>
+                <Typography>(562) 753 - 3215</Typography>
+              </ButtonBase>
+              <ButtonBase
+                sx={{
+                  display: "flex",
+                  width: "100%",
+                  justifyContent: "left",
+                  px: 1,
+                  mb: 1,
+                  gap: 1
+                }}
+              >
+                <Box><EmailIcon/></Box>
+                <Typography>ifdflowers48@gmail.com</Typography>
+              </ButtonBase>
+            </Box>
           </Box>
           <Box>
             <Typography sx={{fontWeight: 600, letterSpacing: .5, mb: 3, fontSize: "1.2em"}}>Socials</Typography>
-
+            <Box>
+              <ButtonBase
+                sx={{
+                  display: "flex",
+                  width: "100%",
+                  justifyContent: "left",
+                  gap: 1,
+                  px: 1,
+                  mb: 1,
+                }}
+              >
+                <Box><InstagramIcon/></Box>
+                <Typography>Instagram</Typography>
+              </ButtonBase>
+              <ButtonBase
+                sx={{
+                  display: "flex",
+                  width: "100%",
+                  justifyContent: "left",
+                  gap: 1,
+                  px: 1,
+                  mb: 1,
+                }}
+              >
+                <Box><FacebookIcon/></Box>
+                <Typography>Facebook</Typography>
+              </ButtonBase>
+            </Box>
           </Box>
         </Box>
       </Container>
