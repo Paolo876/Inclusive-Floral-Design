@@ -15,8 +15,13 @@ const servicesListItems = [
     description: "Specialized floral arrangements for events such as weddings, parties, and corporate events." 
   },
   { 
-    title: "Sympathy and Funeral Flowers", 
+    title: "Sympathy and Funeral Service", 
     description: "We provide wreaths, sprays, and other arrangements to express condolences, memorial services and tributes." 
+    // description: "We provide wreaths, sprays, and other arrangements to express condolences and tributes. A part of our memorial services is cleaning the headstone and" 
+  },
+  { 
+    title: "Memorial Detailing Service", 
+    description: "We offer headstone detailing and landscaping the land of a departed loved one's grave in the cemetery." 
   },
   { 
     title: "Seasonal and Holiday Specials", 
