@@ -107,6 +107,8 @@ const Footer = () => {
                   px: 1,
                   mb: 1,
                 }}
+                href="tel:323-332-2280"
+                target="_blank"
               >
                 <Box><LocalPhoneIcon/></Box>
                 <Typography>(323) 332 - 2280</Typography>
@@ -120,6 +122,8 @@ const Footer = () => {
                   px: 1,
                   mb: 1,
                 }}
+                href="tel:562-753-3215"
+                target="_blank"
               >
                 <Box><LocalPhoneIcon/></Box>
                 <Typography>(562) 753 - 3215</Typography>
@@ -139,6 +143,8 @@ const Footer = () => {
                   mb: 1,
                   gap: 1
                 }}
+                href="mailto: ifdflowers48@gmail.com"
+                target="_blank"
               >
                 <Box><EmailIcon/></Box>
                 <Typography>ifdflowers48@gmail.com</Typography>
@@ -152,6 +158,8 @@ const Footer = () => {
                   px: 1,
                   mb: 1,
                 }}
+                href="https://www.instagram.com/ifdflower48/"
+                target="_blank"
               >
                 <Box><InstagramIcon/></Box>
                 <Typography>Instagram</Typography>
@@ -165,6 +173,8 @@ const Footer = () => {
                   px: 1,
                   mb: 1,
                 }}
+                href="https://www.facebook.com/inclusivefloralLA"
+                target="_blank"
               >
                 <Box><FacebookIcon/></Box>
                 <Typography>Facebook</Typography>
