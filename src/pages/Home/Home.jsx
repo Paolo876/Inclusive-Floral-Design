@@ -5,7 +5,7 @@ import { Box } from '@mui/material'
 import FeaturedCollection from './FeaturedCollection/FeaturedCollection'
 import Services from './Services'
 import Footer from "../../components/Footer"
-import About from './About'
+import Testimonies from './Testimonies/Testimonies'
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
       <Header/>
       <FeaturedCollection/>
       <Services/>
-      <About/>
+      <Testimonies/>
       <Footer/>
     </Box>
   )

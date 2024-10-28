@@ -1,6 +1,8 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
-const About = () => {
+import ReviewItem from './ReviewItem'
+
+const Testimonies = () => {
   return (
     <Box
       sx={{
@@ -17,12 +19,15 @@ const About = () => {
         }}
         align='center'
       >
-        Our Story
+        What our Customers say
       </Typography>
+      <Box>
+
+      </Box>
     </Box>
   )
 }
 
-export default About
+export default Testimonies
 
-// our story
+// https://developers.google.com/my-business/content/review-data#list_all_reviews
