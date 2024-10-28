@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 import { Box, Button, ButtonBase, Container, Typography } from '@mui/material'
 import Image from 'mui-image'
 import banner from "../assets/ifd_banner.png"
@@ -12,6 +13,8 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <Box
       sx={{
@@ -26,12 +29,12 @@ const Footer = () => {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-evenly",
-            mb: 5,
+            mb: 8,
           }}
         >
           <Box
             sx={{
-              height: "100px"
+              height: "95px"
             }}
           >
             <Image src={banner} alt="banner" fit="scale-down"/>
@@ -64,7 +67,17 @@ const Footer = () => {
                   </Typography>
                 </Box>
               </Box>
-              <Box><Button startIcon={<GoogleIcon color="info"/>} variant='outlined' color="info">Navigate with Google Maps</Button></Box>
+              <Box>
+                <Button 
+                  startIcon={<GoogleIcon color="info"/>} 
+                  variant='outlined' 
+                  color="info"
+                  href="https://www.google.com/maps/dir//inclusive+floral+designs/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0xc96ffd7dfc3e287:0x7b5d0ba418e1ccd?sa=X&ved=1t:3061&ictx=111"
+                  target="_blank"
+                >
+                  Navigate with Google Maps
+                </Button>
+              </Box>
             </Box>
           </Box>
 
@@ -111,6 +124,12 @@ const Footer = () => {
                 <Box><LocalPhoneIcon/></Box>
                 <Typography>(562) 753 - 3215</Typography>
               </ButtonBase>
+
+            </Box>
+          </Box>
+          <Box>
+            <Typography sx={{fontWeight: 600, letterSpacing: .5, mb: 3, fontSize: "1.2em"}}>Socials</Typography>
+            <Box>
               <ButtonBase
                 sx={{
                   display: "flex",
@@ -124,11 +143,6 @@ const Footer = () => {
                 <Box><EmailIcon/></Box>
                 <Typography>ifdflowers48@gmail.com</Typography>
               </ButtonBase>
-            </Box>
-          </Box>
-          <Box>
-            <Typography sx={{fontWeight: 600, letterSpacing: .5, mb: 3, fontSize: "1.2em"}}>Socials</Typography>
-            <Box>
               <ButtonBase
                 sx={{
                   display: "flex",
