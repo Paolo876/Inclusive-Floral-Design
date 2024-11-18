@@ -1,6 +1,9 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, Grid, Container } from '@mui/material'
 import ReviewItem from './ReviewItem'
+import Carousel from 'react-material-ui-carousel'
+
+
 
 const Testimonies = () => {
   return (
@@ -21,9 +24,28 @@ const Testimonies = () => {
       >
         What our Customers say
       </Typography>
-      <Box>
+      <Container maxWidth="xl">
+        <Carousel
+          indicators={true}
+          interval={8000}
+          duration={800} 
+          navButtonsAlwaysInvisible={true}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              gap: 5,
+              justifyContent: "space-between",
+              // height: "100%",
+            }}>
+            <ReviewItem/>
+            <ReviewItem/>
+            <ReviewItem/>
+          </Box>
+        </Carousel>
 
-      </Box>
+      </Container>
     </Box>
   )
 }
