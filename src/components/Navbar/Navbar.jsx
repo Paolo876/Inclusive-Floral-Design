@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLocation, NavLink, Link as ReactLink } from 'react-router-dom'
+import { useLocation, useNavigate, Link as ReactLink } from 'react-router-dom'
 import { Box, AppBar, Toolbar, Typography, CssBaseline, useScrollTrigger, Slide, ButtonBase, Link } from '@mui/material'
 import Image from 'mui-image'
 import logo_bw from "../../assets/ifd_logo_bw.png"
@@ -31,21 +31,29 @@ const HideOnScroll = (props) => {
 
 
 const Navbar = (props) => {
-  const { pathname } = useLocation()
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
 
+  const handleLogoClick = () => {
+    navigate("/")
+    window.scrollTo({top: 0, behavior: "smooth"});
+  }
+
+  
   return (
     <>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar sx={{background: "none", boxShadow: "none"}}>
+        <AppBar sx={{background: "#efebe5", boxShadow: "none", boxShadow: "rgba(0, 0, 0, 0.05) 1px 1px 2.6px"}}>
           <Toolbar sx={{mx: {md: 1, xl: 2}}}>
             <Box
               sx={{
-              height: {xs: 50, sm: 60, md: 60, lg: 65},
-              width: "auto",
-              my: 1,
-              cursor: "pointer"
+                height: {xs: 50, sm: 60, md: 60, lg: 65},
+                width: "auto",
+                my: 1,
+                cursor: "pointer",
               }}
+              onClick={handleLogoClick}
             >
               <Image 
                 src={logo_bw} 

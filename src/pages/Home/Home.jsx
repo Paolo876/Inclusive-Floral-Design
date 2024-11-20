@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <Box 
       sx={{
-        pt: { lg: 12}
+        pt: { lg: 10}
       }}
     >
       <Header/>
