@@ -88,7 +88,7 @@ const Services = () => {
             >
               {servicesListItems.map((item, id) => (
                 <Box 
-                  id={id}
+                  key={id}
                   sx={{
                     mb: 7,
                     pr: 8

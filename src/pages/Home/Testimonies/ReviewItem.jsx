@@ -81,18 +81,33 @@ const ReviewItem = ({ name, image, review, rating, date }) => {
           >"{review}"</Typography>
         </Box>}
 
-        <Box>
+        <Box
+          mt={3}
+        >
         <Typography
-            textAlign="center"
-            variant='body1'
-            letterSpacing={.25}
-            lineHeight={1.5}
-            fontStyle="italic"
-            fontSize={19}
-            sx={{
-              opacity: .85
-            }}
-          >- {name}</Typography>
+          textAlign="center"
+          variant='body1'
+          letterSpacing={.25}
+          lineHeight={1.5}
+          fontStyle="italic"
+          fontSize={19}
+          sx={{
+            opacity: .85
+          }}
+        >
+          - {name}
+        </Typography>
+        <Typography 
+          variant="subtitle1"
+          textAlign="center"
+          fontSize={15}
+          letterSpacing={.25}
+          sx={{
+            opacity: .65
+          }}
+        >
+          {date.toLocaleDateString()}
+        </Typography>
         </Box>
       </Box>
     </Box>

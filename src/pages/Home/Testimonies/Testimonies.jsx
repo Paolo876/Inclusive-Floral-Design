@@ -45,7 +45,7 @@ const Testimonies = () => {
         variant='h4'
         sx={{
           letterSpacing: .75,
-          mb: 8,
+          mb: 10,
         }}
         align='center'
       >
